@@ -1,0 +1,65 @@
+.main-container {
+   
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 50px;
+
+}
+.quantity{
+  width: 100%;
+  justify-content: center;
+}
+
+.qt-minus {
+  display: inline;
+  float: left;
+}
+.qt-plus{
+  display: inline;
+  float: right;
+} 
+.qt {
+  display: inline;
+  font-size: 19px;
+
+}
+mat-form-field{
+  text-align: center;
+}
+.qt-plus:hover, .qt-minus:hover {
+  background: #cda45e;
+  color: #fff;
+  cursor: pointer;
+}
+
+.qt-plus, .qt-minus {
+  background: #fcfcfc;
+  border: none;
+  font-size: 30px;
+  font-weight: 300;
+  height: 100%;
+ 
+}
+
+.value-button:hover {
+  cursor: pointer;
+}
+
+
+.value-button {
+
+  justify-content: center;
+  margin: 0px;
+  height: 20px;
+  text-align: center;
+  vertical-align: middle;
+  padding: 11px 0;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+

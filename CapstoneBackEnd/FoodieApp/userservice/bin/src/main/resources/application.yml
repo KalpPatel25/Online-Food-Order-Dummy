@@ -1,0 +1,17 @@
+server:
+  port: 9000
+  
+spring:
+  application:
+    name: order-service
+  datasource:
+    url: jdbc:mysql://localhost:3306/microservice?createDatabaseIfNotExist=true
+    username: root
+    password: root
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true         
+
+jwt:
+  secret: cgiStackroute

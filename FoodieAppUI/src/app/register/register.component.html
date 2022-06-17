@@ -1,0 +1,75 @@
+<div class="bg" fxLayout="row" fxLayoutAlign="center center">
+  <mat-card class="box">
+    <mat-card-header>
+      <mat-card-title>New User</mat-card-title>
+    </mat-card-header>
+    <form class="example-form">
+      <mat-card-content>
+        <div class='container'>
+
+          <form name="form" (ngSubmit)=" onSubmit()">
+            <mat-form-field class="example-full-width">
+              <input matInput placeholder="UserName" id="users" [formControl] = "username" name="username" required>
+              <mat-icon matSuffix>account_circle</mat-icon>
+              <br><label *ngIf= "username?.invalid && username?.dirty" class="error"> Username should be more than 5 characters</label>
+            
+
+            </mat-form-field>
+
+            <mat-form-field class="example-full-width">
+              <input matInput placeholder="Email" id="email" [formControl]= "email" name="email" required>
+              <mat-icon matSuffix> email</mat-icon>
+              <br><label *ngIf= "email?.invalid && email?.dirty" class="error"> Provide valid Email Address</label>
+              <!-- *ngIf username?.contains('') -->
+            </mat-form-field>
+
+            <mat-form-field class="example-full-width">
+              <input matInput placeholder="Password" id="pass" [formControl]= "password"  [type] ="showPassword ? 'password' : 'text'" name="password" required>
+              <mat-icon matSuffix (click)= "togglePasswordVisibility()"> {{showPassword?'visibility_off':'visibility'}}</mat-icon>
+              <br><label *ngIf= "password?.invalid && password?.dirty" class="error"> Password should be greater than 5 characters</label>
+            </mat-form-field>
+
+            <mat-form-field class="example-full-width">
+              <input matInput placeholder="FirstName" id="fn" [formControl]= "firstName" name="firstName" required>
+              <mat-icon matSuffix>person</mat-icon>
+              <br><label *ngIf= "firstName?.invalid && firstName?.dirty" class="error"> FirstName should be greater than 3 characters</label>
+            </mat-form-field>
+
+            <mat-form-field class="example-full-width">
+              <input matInput placeholder="LastName" id="ln" [formControl]= "lastName" name="lastName" required>
+              <mat-icon matSuffix>person</mat-icon>
+              <br><label *ngIf= "lastName?.invalid && lastName?.dirty" class="error"> LastName should be more than 3 characters</label>
+            </mat-form-field>
+
+            <mat-form-field class="example-full-width">
+              <input matInput placeholder="City" id="city" [formControl]= "city" name="city" required>
+              <mat-icon matSuffix>location_city</mat-icon>
+              <br><label *ngIf= "city?.invalid && city?.dirty" class="error"> Should be more than 4 characters</label>
+            </mat-form-field>
+
+            <mat-form-field class="example-full-width">
+              <input matInput placeholder="Country" id="country" [formControl]= "country" name="country" required>
+              <mat-icon matSuffix>flag</mat-icon>
+              <br><label *ngIf= "country?.invalid && country?.dirty" class="error"> Should be more than 4 characters</label>
+            </mat-form-field>
+
+            <mat-form-field class="example-full-width">
+              <input matInput placeholder="Mobile" id="number" type="number" [formControl]= "mobile" size="10" name="mobile"
+                required>
+                <mat-icon matSuffix> phone</mat-icon>
+              <br><label *ngIf= "mobile?.invalid && mobile?.dirty" class="error"> Mobile No. should not be more than 10 characters</label>
+            </mat-form-field>
+
+            <button mat-stroked-button color="accent" class="btn-block">Register</button>
+           
+           
+            <label>Already have account ?</label>
+            <a mat-button (click)="login()" routerLinkActive="active">Login</a>
+            <br> <label *ngIf= "signupFailure" class="error-message">{{errormessage}}</label>
+          </form>
+        </div>
+      </mat-card-content>
+    </form>
+
+  </mat-card>
+</div>

@@ -1,0 +1,92 @@
+
+ <div > 
+    
+    <mat-toolbar >
+      <div fxShow="true" fxHide.gt-sm="true">
+        <button mat-icon-button [matMenuTriggerFor]="menu">
+          <mat-icon>menu</mat-icon>
+        </button>
+      </div>
+  
+     
+        <div class="logo">
+            <a routerLink="/home" >
+            <h1 class="a1">Food</h1><h1 class="a2">ie</h1>
+        </a>
+            </div>
+
+
+                
+     
+      <span class="example-spacer"></span>
+      <div fxShow="true" fxHide.lt-md="true">
+          <ul class="btnul">
+              <!-- <li class="btnli"><button class="navbtns" mat-flat-button (click)="goToResSearch()" *ngIf="isUser">
+                <mat-icon>search</mat-icon>
+                Search
+            </button></li> -->
+              <li class="btnli" > <button  class="navbtns" mat-flat-button (click)="goToCart()" *ngIf="isUser">
+                <mat-icon >shopping_cart</mat-icon>
+                Cart
+                <span class="badge badge-pill badge-danger notify">{{itemNumber}}</span>
+                </button></li>
+              <li class="btnli"> <button class="navbtns" mat-raised-button  (click)="goToSignIn()" *ngIf="!isAuth">Sign In</button></li>
+              <li class="btnli"> <button class="navbtns" mat-raised-button  (click)="goToSignUp()" *ngIf="!isAuth">Register New Restaurant</button></li>
+              <li class="btnli"> <button class="navbtns" mat-raised-button  [routerLink]="[('/order-user')]" *ngIf="isUser"><mat-icon>restaurant_menu</mat-icon>Past Orders</button></li>
+              <li class="btnli"> <button class="navbtns" mat-raised-button  [routerLink]="[('/order-admin')]" *ngIf="isAdmin"><mat-icon>restaurant_menu</mat-icon>Past Orders</button></li>
+              <li class="btnli"> <button class="navbtns" mat-raised-button  [routerLink]="[('/order-owner')]" *ngIf="isOwner"><mat-icon>restaurant_menu</mat-icon>Past Orders</button></li>
+              <li class="btnli"><button class="navbtns" mat-raised-button [routerLink]="[('/about-us')]">About Us</button></li>
+              <li class="btnli">
+                   <button class="navbtns" mat-raised-button  [routerLink]="[('/home')]" *ngIf="isUser"><mat-icon>account_circle</mat-icon>Hi {{username}}</button>
+                   <button class="navbtns" mat-raised-button [routerLink]="[('/restaurant-admin')]" *ngIf="isAdmin"><mat-icon>account_circle</mat-icon>Hi {{username}}</button>
+                   <button class="navbtns" mat-raised-button [routerLink]="[('/restaurant-owner')]" *ngIf="isOwner"><mat-icon>account_circle</mat-icon>Hi {{username}}</button>
+                   
+            </li>
+       
+              <li class="btnli"> <button class="navbtns" mat-raised-button  (click)="goToSignOut()" *ngIf="isAuth">Sign Out</button></li>
+          </ul>
+      </div>
+  
+    </mat-toolbar>
+    <mat-sidenav-container fxFlexFill class="example-container">
+
+
+
+        <mat-menu class="bg-dark" #menu="matMenu" color="primary" fxLayout="column" mode="side" opened="false" fxHide.gt-sm="true">
+
+            <div fxLayout="column">
+
+                <ul class="btnul">
+                    <li class="btnli"><button class="navbtns" mat-flat-button (click)="goToResSearch()" *ngIf="isUser">
+                      <mat-icon>search</mat-icon>
+                      Search
+                  </button></li>
+                    <li class="btnli" > <button  class="navbtns" mat-flat-button (click)="goToCart()" *ngIf="isUser">
+                      <mat-icon >shopping_cart</mat-icon>
+                      Cart
+                      <span class="badge badge-pill badge-danger notify">{{itemNumber}}</span>
+                      </button></li>
+                    <li class="btnli"> <button class="navbtns" mat-raised-button  (click)="goToSignIn()" *ngIf="!isAuth">Sign In</button></li>
+                    <li class="btnli"> <button class="navbtns" mat-raised-button  (click)="goToSignUp()" *ngIf="!isAuth">Resgister New Restaurant</button></li>
+                    <li class="btnli"> <button class="navbtns" mat-raised-button  [routerLink]="[('/order-user')]" *ngIf="isUser"><mat-icon>restaurant_menu</mat-icon>Past Orders</button></li>
+                    <li class="btnli"><button class="navbtns" mat-raised-button [routerLink]="[('/about-us')]">About Us</button></li>
+                    <li class="btnli">
+                         <button class="navbtns" mat-raised-button *ngIf="isAuth"><mat-icon>account_circle</mat-icon>Hi {{username}}</button>
+                         
+                  </li>
+             
+                    <li class="btnli"> <button class="navbtns" mat-raised-button  (click)="goToSignOut()" *ngIf="isAuth">Sign Out</button></li>
+                </ul>
+
+            </div>
+
+        </mat-menu>
+
+
+
+
+    </mat-sidenav-container>
+  </div> 
+
+
+      

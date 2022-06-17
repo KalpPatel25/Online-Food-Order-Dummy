@@ -1,0 +1,23 @@
+<div class="content">
+  <div class="matcontent" *ngFor="let res of resList">
+    <mat-card class="mat-elevation-z4" >
+      <mat-card-header>
+        <mat-card-title>{{res.restaurantName}}</mat-card-title>
+        <mat-slide-toggle *ngIf="!res.status" [checked]="false" (change)="onChange($event, res)" class="btnfloat"></mat-slide-toggle>
+        <mat-slide-toggle *ngIf="res.status" [checked]="true" (change)="onChange($event, res)" class="btnfloat"></mat-slide-toggle>
+      </mat-card-header>
+      <div class="imgContainer">
+      <img class="image1" src={{res.restaurantImageUrl}}>
+    </div>
+      <mat-card-content >
+        <span>
+        {{res.restaurantType}}
+        </span>
+        <!-- <mat-icon class="switch-fav" (click)="onaddToFav(res)">{{res.addToFav==true ? 'favorite' : 'favorite_border'}}</mat-icon> -->
+      </mat-card-content>
+    </mat-card>
+
+
+</div>
+</div>
+

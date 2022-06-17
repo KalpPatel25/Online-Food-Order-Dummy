@@ -1,0 +1,19 @@
+<div class="main-container">
+  <h1 mat-dialog-title>{{data.itemName}}</h1>
+  <div mat-dialog-content>
+    <p>Choose Quantity</p>
+    <mat-form-field  appearance="fill">
+      <mat-label>Quantity</mat-label>
+      <!-- <input matInput [(ngModel)]="data.animal"> -->
+      <span class="quantity"> <span class="qt-minus"><mat-icon (click)="quantDecrease()" *ngIf="!((quantity)==1)">remove_circle</mat-icon></span>
+                  <span class="qt">{{quantity}}</span>
+                  <span class="qt-plus"><mat-icon (click)="quantIncrease()">add_circle</mat-icon></span>
+      </span>
+  
+    </mat-form-field>
+  </div>
+  <div mat-dialog-actions class="value-button">
+    <!-- <button mat-button (click)="onNoClick()">No Thanks</button> -->
+    <button mat-button (click)="AddToCart(data)" [mat-dialog-close]="data" cdkFocusInitial>Add To Cart</button>
+  </div>
+  </div>

@@ -1,0 +1,100 @@
+<div class="bg">
+<div class="blur">
+<div class="container">
+   
+
+    <div >
+        <button mat-raised-button class="subBtn" (click)="goToRestaurantPage()"><mat-icon>arrow_back</mat-icon>Continue Ordering</button>
+        <h1 class="head">Shopping Cart</h1>
+    </div>
+	
+
+    <div class="cart" *ngIf="!orderPresent">
+
+        <img class="gif" src="https://c.tenor.com/dmfyqkE1cvkAAAAM/lunch-dinner.gif" alt="Waiting for food" style="width:500px;height:400px;">
+        <p ><h1 class="empty">Your Cart is Empty! Add some delicious food and come back.</h1> 
+    
+    </div>
+	<div class="cart" *ngIf="orderPresent">
+
+		<div class="products" *ngFor="let item of itemList">
+
+			<div class="product">
+
+                    <img src={{item.imageUrl}} alt="">
+
+                
+
+				<div class="product-info">
+
+					<h3 class="product-name">{{item.itemName}}</h3>
+
+					<h5 class="product-price">${{item.price}} each</h5>
+
+					<h4 class="product-offer">${{item.quantityPrice.toFixed(2)}}</h4>
+
+					
+                        <div class="product-quantity">
+                            <span class="qt-minus"><mat-icon (click)="quantDecrease(item)" *ngIf="!((item.itemQuantity)==1)">remove_circle</mat-icon></span>
+                            <span class="qt">{{item.itemQuantity}}</span>
+                            <span class="qt-plus"><mat-icon (click)="quantIncrease(item)">add_circle</mat-icon></span>
+                        </div>
+					
+
+						<button class="product-remove" (click)="removeItem(item.itemId)" mat-raised-button><mat-icon>delete</mat-icon>Remove</button>
+
+
+
+				</div>
+
+			</div>
+
+		</div>
+
+        <div class="price-section">
+        <div class="left">
+
+			<form >
+                <h2 class="prowrite">Enter promo code: </h2>
+                <input class="promo" type="text">
+                <button mat-raised-button class="subBtn">Submit</button>
+            </form>
+
+		</div>
+        
+		<div class="cart-total">
+
+			<p>
+
+				<span>Subtotal</span>
+
+				<span>${{subtotal.toFixed(2)}}</span>
+
+			</p>
+
+			<p>
+
+				<span>Tax</span>
+
+				<span>${{tax.toFixed(2)}}</span>
+
+			</p>
+
+			<p>
+
+				<span>Total Amount</span>
+
+				<span>${{totalPrice.toFixed(2)}}</span>
+
+			</p>
+
+			<button class="btn" mat-raised-button (click)="placeOrder()">Place Order</button>
+
+		</div>
+    </div>
+
+	</div>
+</div>
+</div>
+
+</div>

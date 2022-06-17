@@ -1,0 +1,42 @@
+
+
+     <div class="bg" fxLayout="row" fxLayoutAlign="center center">
+      <mat-card class="box">
+        <mat-card-header>
+          <mat-card-title><h1 class="a1">Food</h1><h1 class="a2">ie</h1></mat-card-title>
+        </mat-card-header>
+        <form class="example-form">
+          <mat-card-content>
+              <div class='container'>
+                
+               
+    
+    
+              <form name ="loginForm" (ngSubmit)=" onSubmit()">
+              <mat-form-field class="example-full-width">
+                <input matInput placeholder="UserName" id="user" [formControl] ="username" name="username" required>
+                <mat-icon matSuffix>account_circle</mat-icon>
+                <br><label *ngIf = "username?.invalid && username?.dirty" class="error"> Username should be more than 5 characters</label>
+              </mat-form-field>
+    
+              <mat-form-field class="example-full-width">
+                <input matInput placeholder="Password" id="pass" [formControl] ="password" [type] ="showPassword ? 'text' : 'password'" name="password" required>
+                <mat-icon matSuffix (click)= "togglePasswordVisibility()"> {{showPassword?'visibility':'visibility_off'}}</mat-icon>
+                <br><label *ngIf = "password?.invalid && password?.dirty" class="error">Password should be greater than 5 characters</label>
+              </mat-form-field>        
+                  <button mat-stroked-button color="accent" class="btn-block" >Submit</button>
+                  <label *ngIf= "loginSuccess; else failure" class="error-message">{{errormessage}}</label>
+                  <ng-template #failure>{{errormessage}}</ng-template>
+                 <br> <label>Not a registered user?</label>
+                  <a mat-button (click)="signUp()" routerLinkActive="active">SignUp</a>
+              </form>
+          
+              </div> 
+             
+            </mat-card-content>
+            
+          </form>
+          
+        </mat-card>
+        </div>
+    

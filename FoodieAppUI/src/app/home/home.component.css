@@ -1,0 +1,334 @@
+.content{
+  padding: 50px;
+  padding-top: 10px;
+  display: flex;
+  flex-direction:row;
+  flex-wrap: wrap;  
+  
+}
+.example-card
+{
+  width: 80%;
+}
+.matcontent
+{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  
+}
+.switch-fav{
+  float: right;
+}
+
+
+.title-card-left{
+  display:inline;
+}
+
+.image1{
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  }
+
+  h2{
+    padding-left: 10px;
+    color: #eee;
+    
+  }
+  .mat-elevation-z4{
+    margin: 10px;
+  }
+ 
+.imgContainer{
+
+  margin-top: 5px;
+position: relative;
+
+}
+
+.example-form1{
+  color: rgb(255, 255, 255);
+  text-align: center;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.301);
+ 
+ 
+}
+
+.example-form1 input{
+   margin-top: 5px;
+  color: rgb(255, 255, 255);
+  font-size: large;
+}
+
+
+.textCenter{
+
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+opacity: 0;
+transition: 0.25s all ease-in-out;
+font-weight: bold;
+font-size: larger;
+
+}
+
+
+
+.image1:hover{
+  opacity: 0.45;
+  transform: translate3D(0,-1px,0) scale(1.05);
+  box-shadow: 20px 20px 50px 10px gray inset;
+  transition: 0.5s all ease-in-out;
+}
+
+
+
+.imgContainer:hover .textCenter{
+  color: black;
+  opacity: 1;
+
+}
+
+.favbtn
+{
+  float: right;
+  margin-top: 5px;
+  background-color: black;
+    color: white;
+    border: 1px solid grey;
+    box-shadow: 5px 5px  10px 2px grey;
+}
+.favbtn:hover
+{
+  background-color: white;
+      color: black;
+      transition: 0.3s all ease-in-out;
+}
+
+#hero {
+  width: 100%;
+  height: 75vh;
+  background: url("https://four.psbdigital.ca/wp-content/uploads/2020/02/online.jpeg") top center;
+  background-size: cover;
+  position: relative;
+  padding: 0;
+}
+#hero:before {
+  content: "";
+  background: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+
+
+
+#hero .container {
+  padding-top: 110px;
+}
+@media (max-width: 992px) {
+  #hero .container {
+    padding-top: 98px;
+  }
+  .bg{
+    padding-bottom: 80px;
+  }
+}
+#hero h1 {
+  margin: 0;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 56px;
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+}
+#hero h1 span {
+  color: #cda45e;
+}
+#hero h2 {
+  color: #eee;
+  margin-bottom: 10px 0 0 0;
+  font-size: 22px;
+}
+#hero .btns {
+  margin-top: 30px;
+}
+#hero .btn-menu, #hero .btn-book {
+  font-weight: 600;
+  font-size: 13px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  display: inline-block;
+  padding: 12px 30px;
+  border-radius: 50px;
+  transition: 0.3s;
+  line-height: 1;
+  color: white;
+  border: 2px solid #cda45e;
+}
+#hero .btn-menu:hover, #hero .btn-book:hover {
+  background: #cda45e;
+  color: #fff;
+}
+#hero .btn-book {
+  margin-left: 15px;
+}
+
+@media (min-width: 1024px) {
+  #hero {
+    background-attachment: fixed;
+  }
+}
+@media (max-width: 992px) {
+  #hero .play-btn {
+    margin-top: 30px;
+  }
+}
+@media (max-height: 500px) {
+  #hero {
+    height: auto;
+  }
+  .bg{
+    padding-bottom: 100px;
+  }
+  #hero .container {
+    padding-top: 130px;
+    padding-bottom: 60px;
+  }
+}
+@media (max-width: 768px) {
+  #hero h1 {
+    font-size: 28px;
+    line-height: 36px;
+  }
+  #hero h2 {
+    font-size: 18px;
+    line-height: 24px;
+  }
+}
+
+@-webkit-keyframes pulsate-btn {
+  0% {
+    transform: scale(0.6, 0.6);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1, 1);
+    opacity: 0;
+  }
+}
+
+@keyframes pulsate-btn {
+  0% {
+    transform: scale(0.6, 0.6);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1, 1);
+    opacity: 0;
+  }
+}
+
+.bg
+{
+   background-image: url("https://wallpaperaccess.com/full/3353887.jpg");
+   background-repeat: round;
+   background-size: cover;
+   scroll-behavior:smooth; 
+   
+}
+ 
+.a1 {
+  display: inline;
+  font-size: 40px;
+  font-weight: bolder;
+  font-family: "Lucida Handwriting";
+  color: red;
+}
+.a2 {
+  display: inline;
+  font-size: 40px;
+  font-weight: bolder;
+  font-family: "Lucida Handwriting";
+  color: green;
+}
+
+.mat-tab-label, .mat-tab-link {
+font-size: larger;
+ color:white;
+ background-color: rgba(10, 10, 10, 0.979);
+ justify-content: center;
+ width: 100%;
+ 
+}
+
+.tabs> label
+{
+  color: white;
+}
+
+.blur {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(8px); 
+  height: auto;
+	width: 100%;
+}
+
+
+
+/* .box{
+  position: relative;
+  justify-items: center;
+  margin-top: 50px;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  display: inline-block;
+}
+
+.srchicon
+{
+  color: #ffd52d;
+  
+}
+
+
+.input {
+  padding: 10px;
+  width: 30px;
+  height: 45px;
+  background: none;
+  border: 4px solid #ffd52d;
+  border-radius: 50px;
+  box-sizing: border-box;
+  font-family: Comic Sans MS;
+  font-size: 26px;
+  color: #ffd52d;
+  outline: none;
+  transition: .5s;
+}
+.box:hover input{
+  width: 350px;
+  background: #272133;
+  border-radius: 10px;
+}
+i{
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  transform: translate(-50%,-50%);
+  font-size: 26px;
+  color: #ffd52d;
+  transition: .2s;
+}
+.box:hover i{
+  opacity: 0;
+  z-index: -1;
+} */

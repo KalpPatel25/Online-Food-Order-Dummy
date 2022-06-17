@@ -1,0 +1,143 @@
+footer {
+ 
+  width: 100%;
+  height: auto;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+
+}
+
+ul {
+color: white;
+ 
+  list-style-type: none;
+  margin: 5px;
+  padding: 0px;
+  overflow: hidden;
+}
+ul > li {
+  display: block;
+  float: left;
+  margin: 0px 10px;
+}
+
+
+footer a {
+text-decoration: none;
+color: #eee;
+}
+a:hover {
+text-decoration: underline;
+}
+
+/* Sticks footer to bottom */
+
+
+/* Footer main | Newsletter form */
+form {
+display: flex;
+width: 100%;
+flex-wrap: wrap;
+background-color: black;
+}
+
+.fa {
+font-size: 25px;
+margin:5px 10px;
+padding:0px;
+text-decoration: none;
+}
+
+.left-list {
+float: left;
+ }
+
+.fa:hover {
+opacity: 0.7;
+}
+
+.fa-facebook {
+color: white;
+}
+
+.fa-twitter {
+color: white;
+}
+
+.fa-instagram {
+color: white;
+}
+h1 {
+display: inline;
+font-family: "Lucida Handwriting";
+}
+.a1 {
+color: red;
+}
+.a2 {
+color: green;
+}
+.logo {
+display: inline;
+width: auto;
+font-size: 15px;
+color: white;
+text-align: center;
+margin-left: 15%;
+}
+
+.foot
+{
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+
+.icons {
+display: flex;
+float: left;
+width: auto;
+}
+
+
+@media screen and (max-width: 700px){
+
+.foot
+{
+  justify-content: space-evenly;
+}
+
+	.logo
+  {
+    width: 100%;
+    margin-left: 0;
+  }
+
+}
+
+@media screen and (max-width: 900px){
+
+  .foot
+  {
+    justify-content: space-evenly;
+  }
+  
+    .logo
+    {
+      width: 100%;
+      margin-left: 0;
+    }
+	
+}
+
+@media screen and (max-width: 1220px){
+
+	
+
+
+
+}
+
+

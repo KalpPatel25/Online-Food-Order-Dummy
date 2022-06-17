@@ -1,0 +1,39 @@
+<div class="entirePage">
+  <section id="menu" class="menu section-bg">
+    <div class="container" data-aos="fade-up">
+      <div class="section-title">
+        <p>{{resName}}</p>
+        <div class="img-height">
+          <img class="setimg" src="{{imageSrc}}" />
+        </div>
+       
+      </div>
+      <div class="row" data-aos="fade-up" data-aos-delay="100" *ngIf="!itemPresent">
+        <h1>No Items to Display! Please add items</h1>
+      </div>
+      
+      <div class="row" data-aos="fade-up" data-aos-delay="100" *ngIf="itemPresent">
+        <div class="col-lg-12 d-flex justify-content-center">
+          <h2>Menu</h2>
+        </div>
+      </div>
+
+      <div class="div-col-2">
+        <div class="row menu-container" fxLayout="row"  *ngFor="let res of itemLists" data-aos="fade-up" data-aos-delay="200">
+          <div class="col-lg-12 menu-item">
+            <img src={{res.imageUrl}} class="menu-img" alt="">
+            <div class="menu-content">
+              <a href="#">{{res.itemName}}</a>
+              <span>{{res.price}}</span>
+              <mat-slide-toggle *ngIf="res.itemStatus === 'Disable'" [checked]="false" (change)="onChange($event, res)" class="btnfloat"></mat-slide-toggle>
+  
+                <mat-slide-toggle *ngIf="res.itemStatus === 'Enable'" [checked]="true" (change)="onChange($event, res)" class="btnfloat"></mat-slide-toggle>
+            </div>
+          </div>
+        </div>  
+      </div>
+     
+     
+    </div>
+  </section>
+</div>

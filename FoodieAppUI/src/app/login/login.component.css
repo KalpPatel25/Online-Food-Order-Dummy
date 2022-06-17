@@ -1,0 +1,133 @@
+.bg .example-form {
+  
+  min-width: 100%;
+  max-width: 300px;
+   font-family: "Century Gothic",Verdana,sans-serif;
+   font-style: italic;
+  width: 100%;
+     
+}
+.box{
+
+    position: absolute;
+    right: 0;
+    margin: 20px;
+    max-width: 300px;
+    padding: 16px;
+    background-color: white;
+  
+}
+
+h1 {
+  display: inline;
+  font-family: "Lucida Handwriting";
+}
+.a1 {
+  color: red;
+}
+.a2 {
+  color: green;
+}
+
+
+.bg{
+  background-image: url("https://b.zmtcdn.com/mx-onboarding-hero87f77501659a5656cad54d98e72bf0d81627911821.webp");
+  
+  min-height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+ 
+  /* position: relative; */
+
+  }
+
+.bg .example-full-width,
+.bg .btn-block {
+  font-family: "Century Gothic",Verdana,sans-serif;
+  font-weight: bold;
+  width: 100%;
+}
+.error{
+  color: rgb(207, 81, 81);
+  opacity:1;
+  font-size: xx-small;
+}
+ .app-header {
+    justify-content: space-between;
+    position: fixed;
+    top: 10;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    border: 5px solid currentColor;
+    box-shadow: 0 3px 5px -1px rgba(0, 0, 0, 5), 0 6px 10px 0 rgba(0, 0, 0, 5), 0 1px 18px 0 rgba(0, 0, 0, .12);
+  }
+
+  .bg {
+    height: 100%;
+  }
+
+
+  body {
+    margin: 0;
+    font-family: "Century Gothic",Verdana,sans-serif;
+    min-height: 100vh;
+    background: #e2e2e2;
+  }
+  .bg mat-card-header {
+    text-align: center;
+    
+    width: 100%;
+    display: block;
+    font-weight: 700;
+  }
+
+  .bg mat-card-header mat-card-title {
+    font-size: 22px;
+    font-style: italic;
+    font-weight:bold;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 0;
+    color: green;
+    padding: 0px 20px 20px;
+  }
+  .bg .mat-stroked-button {
+    color: rgba(0, 0, 0, 0.7);
+    border: 1px solid currentColor;
+    box-shadow: 0 0 2px currentColor;
+    font-family: "Century Gothic",Verdana,sans-serif;
+    margin: 0;
+    line-height: 55px;
+    font-size: medium;
+    background: #FFFFFF;
+  }
+  .login-wrapper .mat-card {
+    padding: 40px 70px 50px;
+  }
+
+  .box {
+    position: relative;
+    top: 0;
+    opacity: 10;
+    float: left;
+    padding: 60px 50px 40px 50px;
+    width: 125%;
+    background: #FFFFFF;
+    border-radius: 15px;
+    border-top: #e2e2e2;
+    border-color: black;
+    transform: scale(1);
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    z-index: 5;
+    max-width: 330px;
+    border: 1px solid;
+    /* background-image: url("../assets/images/download.jpg"); */
+
+  }
+
+ 
+  .bg .mat-form-field-appearance-legacy .mat-form-field-infix {
+    padding: 0.8375em 0;
+  }

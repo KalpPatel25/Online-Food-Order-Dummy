@@ -1,0 +1,255 @@
+<section id="hero" class="d-flex align-items-center">
+  <div class="container position-relative text-center text-lg-start" data-aos="zoom-in" data-aos-delay="100">
+    <div class="row">
+      <div class="col-lg-4 d-flex align-items-center justify-content-center position-relative" data-aos="zoom-in" data-aos-delay="200">
+      </div>
+    </div>
+  </div>
+</section><!-- End Hero -->
+
+<!-- 
+<div class="box">
+  <form name="search">
+      <input type="tel" class="input" placeholder="Search" name="search" [(ngModel)]="searchText" 
+      onmouseout="document.search.txt.value = ''" >
+      <mat-icon class="srchicon">search</mat-icon>
+  </form>
+      
+</div> -->
+<!-- <button mat-raised-button class="favbtn" (click)="goTofav()">Go to Favourites</button> -->
+
+<div class="bg">
+  <div class="blur">
+   
+    <button mat-raised-button class="favbtn" (click)="goTofav()">Go to Favourites</button>
+  
+
+      <!-- Search form -->
+    
+<div class="search-bar">
+  <form class="example-form1">
+   
+      <mat-form-field>
+        <input matInput type="text" #search placeholder="Search" name= "search" [(ngModel)]= "searchText">
+        <button matSuffix mat-button><mat-icon >search</mat-icon></button>
+        </mat-form-field>
+
+    
+    </form>
+</div>
+
+    
+
+  <mat-tab-group class="gettabs" animationDuration="0ms">
+    
+    <mat-tab class="tabs" label="All">
+
+      <h2 id="bar">Bar</h2>
+      
+      <div class="content">
+      
+            <div class="matcontent" *ngFor="let res of resList | search:searchText">
+              <mat-card class="mat-elevation-z4 example-card" *ngIf="res.restaurantType==='Bar'">
+                <mat-card-header>
+                  <mat-card-title>{{res.restaurantName}}</mat-card-title>
+                </mat-card-header>
+                <div class="imgContainer">
+                <img (click)="goToMenu(res)" class="image1" src={{res.restaurantImageUrl}}>
+                <!-- <span class="textCenter">{{res.restaurantDesc}}</span> -->
+              </div>
+                <mat-card-content>
+                  <span>
+                  {{res.restaurantDesc}}
+                  </span>
+                  <mat-icon class="switch-fav" (click)="onaddToFav(res)">{{res.addToFav==true ? 'favorite' : 'favorite_border'}}</mat-icon>
+                 <!-- <mat-icon class="fav-add">favorite</mat-icon>
+                 <mat-icon class="fav-remove">favorite_border</mat-icon> -->
+                </mat-card-content>
+              </mat-card>
+          </div>
+      </div>
+   
+   
+      <h2 id="cafe">Cafe</h2>
+    <div class="content">
+    
+      <div class="matcontent" *ngFor="let res of resList| search:searchText">
+        <mat-card class="mat-elevation-z4 example-card" *ngIf="res.restaurantType==='Cafe'">
+          <mat-card-header>
+            <mat-card-title>{{res.restaurantName}}</mat-card-title>
+          </mat-card-header>
+          <div class="imgContainer">
+            <img (click)="goToMenu(res)" class="image1" src={{res.restaurantImageUrl}}>
+          </div>
+          <mat-card-content>
+            <span>
+            {{res.restaurantDesc}}
+            </span>
+            <mat-icon class="switch-fav" (click)="onaddToFav(res)">{{res.addToFav==true ? 'favorite' : 'favorite_border'}}</mat-icon>
+          </mat-card-content>
+        </mat-card>
+
+    
+    </div>
+  </div>
+  
+  
+      <h2 id="kitchen">Cloud Kitchen</h2>
+      <div class="content">
+      
+          <div class="matcontent" *ngFor="let res of resList| search:searchText">
+            <mat-card class="mat-elevation-z4 example-card" *ngIf="res.restaurantType==='Cloud Kitchen'">
+              <mat-card-header>
+                <mat-card-title>{{res.restaurantName}}</mat-card-title>
+              </mat-card-header>
+              <div class="imgContainer">
+                <img (click)="goToMenu(res)" class="image1" src={{res.restaurantImageUrl}}>
+              </div>
+              <mat-card-content>
+                <span>
+                {{res.restaurantDesc}}
+                </span>
+                <mat-icon class="switch-fav" (click)="onaddToFav(res)">{{res.addToFav==true ? 'favorite' : 'favorite_border'}}</mat-icon>
+              </mat-card-content>
+            </mat-card>
+          
+          </div>
+      
+      </div>
+   
+  
+        
+     
+  <h2 >Take Away</h2>
+     
+  <div class="content">
+      
+        <div class="matcontent" *ngFor="let res of resList| search:searchText">
+          <mat-card class="mat-elevation-z4 example-card" *ngIf="res.restaurantType==='TakeAway'">
+            <mat-card-header>
+              <mat-card-title>{{res.restaurantName}}</mat-card-title>
+            </mat-card-header>
+            <div class="imgContainer">
+              <img (click)="goToMenu(res)" class="image1" src={{res.restaurantImageUrl}}>
+            </div>
+            <mat-card-content>
+              <span>
+              {{res.restaurantDesc}}
+              </span>
+    
+              <mat-icon class="switch-fav" (click)="onaddToFav(res)">{{res.addToFav==true ? 'favorite' : 'favorite_border'}}</mat-icon>
+          
+            </mat-card-content>
+          </mat-card>
+      
+      </div>
+      </div>
+    </mat-tab>
+
+   
+   
+    <mat-tab class="tabs" label="Bar">
+      <h2 id="bar">Bar</h2>
+      <div class="content">
+      
+            <div class="matcontent" *ngFor="let res of resList| search:searchText">
+              <mat-card class="mat-elevation-z4 example-card" *ngIf="res.restaurantType==='Bar'">
+                <mat-card-header>
+                  <mat-card-title>{{res.restaurantName}}</mat-card-title>
+                </mat-card-header>
+                <div class="imgContainer">
+                <img (click)="goToMenu(res)" class="image1" src={{res.restaurantImageUrl}}>
+              </div>
+                <mat-card-content>
+                  <span>
+                  {{res.restaurantDesc}}
+                  </span>
+                  <mat-icon class="switch-fav" (click)="onaddToFav(res)">{{res.addToFav==true ? 'favorite' : 'favorite_border'}}</mat-icon>
+                 <!-- <mat-icon class="fav-add">favorite</mat-icon>
+                 <mat-icon class="fav-remove">favorite_border</mat-icon> -->
+                </mat-card-content>
+              </mat-card>
+          </div>
+      </div>
+    </mat-tab>
+    <mat-tab class="tabs" label="Cafe">
+      <h2 id="cafe">Cafe</h2>
+    <div class="content">
+    
+      <div class="matcontent" *ngFor="let res of resList| search:searchText">
+        <mat-card class="mat-elevation-z4 example-card" *ngIf="res.restaurantType==='Cafe'">
+          <mat-card-header>
+            <mat-card-title>{{res.restaurantName}}</mat-card-title>
+          </mat-card-header>
+          <div class="imgContainer">
+            <img (click)="goToMenu(res)" class="image1" src={{res.restaurantImageUrl}}>
+          </div>
+          <mat-card-content>
+            <span>
+            {{res.restaurantDesc}}
+            </span>
+            <mat-icon class="switch-fav" (click)="onaddToFav(res)">{{res.addToFav==true ? 'favorite' : 'favorite_border'}}</mat-icon>
+          </mat-card-content>
+        </mat-card>
+
+    
+    </div>
+  </div>
+    </mat-tab>
+    <mat-tab class="tabs" label="Cloud Kitchen">
+      <h2 id="kitchen">Cloud Kitchen</h2>
+      <div class="content">
+      
+          <div class="matcontent" *ngFor="let res of resList| search:searchText">
+            <mat-card class="mat-elevation-z4 example-card" *ngIf="res.restaurantType==='Cloud Kitchen'">
+              <mat-card-header>
+                <mat-card-title>{{res.restaurantName}}</mat-card-title>
+              </mat-card-header>
+              <div class="imgContainer">
+                <img (click)="goToMenu(res)" class="image1" src={{res.restaurantImageUrl}}>
+              </div>
+              <mat-card-content>
+                <span>
+                {{res.restaurantDesc}}
+                </span>
+                <mat-icon class="switch-fav" (click)="onaddToFav(res)">{{res.addToFav==true ? 'favorite' : 'favorite_border'}}</mat-icon>
+              </mat-card-content>
+            </mat-card>
+          
+          </div>
+      
+      </div>
+    </mat-tab>
+    <mat-tab class="tabs" label="Take Away" >
+        
+     
+  <h2 >Take Away</h2>
+     
+  <div class="content">
+      
+        <div class="matcontent" *ngFor="let res of resList| search:searchText">
+          <mat-card class="mat-elevation-z4 example-card" *ngIf="res.restaurantType==='TakeAway'">
+            <mat-card-header>
+              <mat-card-title>{{res.restaurantName}}</mat-card-title>
+            </mat-card-header>
+            <div class="imgContainer">
+              <img (click)="goToMenu(res)" class="image1" src={{res.restaurantImageUrl}}>
+            </div>
+            <mat-card-content>
+              <span>
+              {{res.restaurantDesc}}
+              </span>
+    
+              <mat-icon class="switch-fav" (click)="onaddToFav(res)">{{res.addToFav==true ? 'favorite' : 'favorite_border'}}</mat-icon>
+          
+            </mat-card-content>
+          </mat-card>
+      
+      </div>
+      </div>
+    </mat-tab>
+  
+  </mat-tab-group>
+    </div>
+   
+</div>

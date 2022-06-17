@@ -1,0 +1,146 @@
+#hero {
+    width: 100%;
+    height: 100vh;
+    background: url("https://imgix.businessinsider.com.au/content/uploads/sites/5/2020/09/GettyImages-694198404.jpg?ar=4%3A3&auto=format&fit=fill&q=65&w=1200") top center;
+    background-size: cover;
+    position: relative;
+    padding: 0;
+  }
+  #hero:before {
+    content: "";
+    background: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+
+  /* h1 {
+    display: inline;
+    font-size: 40px;
+    font-weight: bolder;
+    font-family: "Lucida Handwriting";
+  } */
+  .a1 {
+    display: inline;
+    font-size: 40px;
+    font-weight: bolder;
+    font-family: "Lucida Handwriting";
+    color: red;
+  }
+  .a2 {
+    display: inline;
+    font-size: 40px;
+    font-weight: bolder;
+    font-family: "Lucida Handwriting";
+    color: green;
+  }
+  #hero .container {
+    padding-top: 110px;
+  }
+  @media (max-width: 992px) {
+    #hero .container {
+      padding-top: 98px;
+    }
+  }
+  #hero h1 {
+      display: inline;
+    margin: 0;
+    font-size: 60px;
+    padding-bottom: 10px;
+    font-weight: 700;
+    line-height: 56px;
+    color: #fff;
+    font-family: "Poppins", sans-serif;
+  }
+  #hero h1 span {
+    color: #cda45e;
+  }
+  #hero h2 {
+    color: #eee;
+    margin-left: 10px;
+    margin-top: 20px;
+    margin-bottom: 10px 0 0 0;
+    font-size: 22px;
+  }
+  #hero .btns {
+    margin-top: 30px;
+   
+  }
+  #hero .btn-menu, #hero .btn-book {
+    font-weight: 600;
+    font-size: 18px;
+    width: 300px;
+    height: 50px;
+    text-align: center;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    display: inline-block;
+     padding-top: 15px;
+    border-radius: 50px;
+    transition: 0.3s;
+    line-height: 1;
+    color: white;
+    border: 2px solid #cda45e;
+  }
+  #hero .btn-menu:hover, #hero .btn-book:hover {
+    background: #cda45e;
+    color: #fff;
+  }
+  #hero .btn-book {
+    margin-left: 15px;
+  }
+
+  @media (min-width: 1024px) {
+    #hero {
+      background-attachment: fixed;
+    }
+  }
+  @media (max-width: 992px) {
+    #hero .play-btn {
+      margin-top: 30px;
+    }
+  }
+  @media (max-height: 500px) {
+    #hero {
+      height: auto;
+    }
+    #hero .container {
+      padding-top: 130px;
+      padding-bottom: 60px;
+    }
+  }
+  @media (max-width: 768px) {
+    #hero h1 {
+      font-size: 28px;
+      line-height: 36px;
+    }
+    #hero h2 {
+      font-size: 18px;
+      line-height: 24px;
+    }
+  }
+  
+  @-webkit-keyframes pulsate-btn {
+    0% {
+      transform: scale(0.6, 0.6);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(1, 1);
+      opacity: 0;
+    }
+  }
+  
+  @keyframes pulsate-btn {
+    0% {
+      transform: scale(0.6, 0.6);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(1, 1);
+      opacity: 0;
+    }
+  }
+  

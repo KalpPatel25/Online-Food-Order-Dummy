@@ -1,0 +1,75 @@
+<div class="bg" fxLayout="row" fxLayoutAlign="center center ">
+    <mat-card class="box">
+      <mat-card-header>
+        <mat-card-title>Register New Restaurant</mat-card-title>
+      </mat-card-header>
+      <form class="example-form">
+        <mat-card-content>
+          <div class='container'>
+            
+            <form name ="form" (ngSubmit)=" onSubmit()">
+              <mat-form-field class="example-full-width">
+                <input matInput placeholder="Restaurant Name" id="resn" [formControl]= "restaurantname" name="restaurantname" required>
+                <mat-icon matSuffix>restaurant</mat-icon>
+                <br><label *ngIf = "restaurantname?.invalid && restaurantname?.dirty" class="error"> Restaurant name should not be empty</label>
+              </mat-form-field>
+
+              <mat-form-field class="example-full-width">
+                <input matInput placeholder="UserName" id="usn" [formControl] = "username" name="username" required>
+                <mat-icon matSuffix>account_circle</mat-icon>
+                  <br><label *ngIf= "username?.invalid && username?.dirty" class="error"> Username should be more than 5 characters</label>  
+              </mat-form-field>
+          
+              <mat-form-field class="example-full-width">
+                <input matInput placeholder="Email" id="email" [formControl]= "email" name="email" required> 
+                <mat-icon matSuffix>email</mat-icon>
+                <br><label *ngIf = "email?.invalid && email?.dirty" class="error"> Provide valid Email Address</label>
+              </mat-form-field>
+         
+              <mat-form-field class="example-full-width">
+                <input matInput placeholder="Password" id="pass" [formControl] ="password" [type] ="showPassword ? 'password' : 'text'" name="password" required>
+                <mat-icon matSuffix (click)= "togglePasswordVisibility()"> {{showPassword?'visibility_off':'visibility'}}</mat-icon>
+                <br><label *ngIf = "password?.invalid && password?.dirty" class="error"> Password should be greater than 5 characters</label>
+               </mat-form-field>
+           
+         <mat-form-field class="example-full-width">
+            <input matInput placeholder="Rating" id="desc" [formControl]= "description" name="description" required> 
+            <mat-icon matSuffix>star</mat-icon>
+            <br><label *ngIf = "description?.invalid && description?.dirty" class="error"> </label>
+          </mat-form-field>
+
+          <mat-form-field class="example-full-width">
+            <input matInput placeholder="Type" id="category" [formControl] = "restauranttype" name="type" value="rating" required>
+            <mat-icon matSuffix> local_bar</mat-icon>
+              <br><label *ngIf= "restauranttype?.invalid && restauranttype?.dirty" class="error"> Type should not be empty</label>  
+          </mat-form-field>
+         
+          <mat-form-field class="example-full-width">
+            <input matInput placeholder="Phone number" id="numb" type="number" [formControl]= "phonenumber" size="10" name="mobile" required> 
+            <mat-icon matSuffix> phone</mat-icon>
+            <br><label *ngIf = "phonenumber?.invalid && phonenumber.dirty" class="error"> Mobile No. should not be more than 10 characters</label>
+          </mat-form-field>
+
+          <!-- <button ng-click="addImage()"><img ng-src="../img/local.png"/></button>   -->
+        <!-- <div class="editor">
+          <form action class ="/action_page.php">
+            <input type="file" id="myFile" name="filename">
+           
+           </form>
+        </div>   -->
+        <mat-form-field class="example-full-width">
+          <input matInput placeholder="Image Url" type="url" id="up" [formControl]= "imageUrl" name="imageUrl" required> 
+          <br><label *ngIf = "imageUrl?.invalid" class="error"> Provide the Url</label>
+        </mat-form-field>
+   
+          <button mat-stroked-button color="accent" class="btn-block">Register</button>
+          <label>Already have account ?</label>
+          <a mat-button (click)="login()" routerLinkActive="active">Login</a>
+          <br> <label *ngIf="signupFailure" class="error-message">{{errormessage}}</label>
+        </form>
+        </div>
+        </mat-card-content>
+      </form>
+    
+    </mat-card>
+  </div>

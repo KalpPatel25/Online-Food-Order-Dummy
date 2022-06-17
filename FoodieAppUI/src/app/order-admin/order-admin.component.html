@@ -1,0 +1,31 @@
+<div class="bg">
+  <div class="blur">
+<h1 class="heading"><u>Past Orders</u></h1>
+<mat-accordion *ngIf="orderPresent">
+  <div class="orders">
+    <mat-expansion-panel class="panel" *ngFor="let order of orderList">
+      <mat-expansion-panel-header class="title-name">
+        <mat-panel-title>
+          {{order.restaurantName}}
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <div class="grid5">
+      <p *ngFor="let item of order.itemList">
+        {{item.itemName}} x {{item.itemQuantity}}________________${{item.quantityPrice}}        
+      </p>
+      <p>Total____________________________${{order.totalPrice}}</p>
+      <p>Order Status____________________{{order.orderStatus}}</p>
+      <p>User___________________________{{order.username}}</p>
+    </div>
+      </mat-expansion-panel>
+    </div>
+    </mat-accordion>
+
+    <div class="container" *ngIf="!orderPresent">
+
+      <img class="gif" src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/27bc556f-b2f1-45ea-8467-056007a46549/d83hemw-23f6bff6-5597-48af-8661-edf4f4eb2180.gif?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzI3YmM1NTZmLWIyZjEtNDVlYS04NDY3LTA1NjAwN2E0NjU0OVwvZDgzaGVtdy0yM2Y2YmZmNi01NTk3LTQ4YWYtODY2MS1lZGY0ZjRlYjIxODAuZ2lmIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.qx_kI5y1oIs5PaOvLzd7tFIn4GQcrPtnssCj0qaeApg" alt="No orders" style="width:500px;height:400px;">
+      <h1>There are no past orders to display!</h1>
+  
+  </div>
+  </div>
+</div>

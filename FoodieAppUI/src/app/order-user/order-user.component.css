@@ -1,0 +1,100 @@
+.heading
+{
+    text-align: center;
+    color: white;
+    font-size: 50px;
+    font-family: 'Papyrus';
+    letter-spacing: 10px;
+    
+  
+}
+.gif
+	{
+		margin-left: 30%;
+	}
+
+.title-anme
+{
+    background-color: #e7dac3;
+    font-size: large;
+    text-transform:uppercase;
+ 
+}
+
+.bg{    
+	background-image: url(https://cdn.create.vista.com/api/media/medium/192739468/stock-photo-top-view-spoon-fork-meat?token=);
+	background-repeat: no-repeat;
+	background-size: cover;
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+.orders{
+    width: 100%;
+    justify-content: center;
+    margin-left: 25%;
+}
+
+
+.blur{
+	backdrop-filter: blur(7px); 
+	height: auto;
+    height: 100%;
+	  width: 100%;
+
+}
+
+.container
+{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.container>h1{
+    
+    color: white;
+    text-align: center;
+    margin-top: 20px;
+
+}
+
+.panel{
+    margin: 10px;
+    width: 50%;
+
+}
+
+.grid5{
+    font-weight: 800;
+    font-size: medium;
+}
+
+
+@media screen and (max-width: 700px){
+
+    .gif{
+        margin-left: 0 !important;
+        width: 100%;
+    }
+    
+    }
+    
+    @media screen and (max-width: 900px){
+    
+      .container
+      {
+          justify-content: center;
+      }
+      
+    }
+    
+    @media screen and (max-width: 1220px){      
+    
+        .gif{
+            margin-left: 20%;
+        }
+    }
+    

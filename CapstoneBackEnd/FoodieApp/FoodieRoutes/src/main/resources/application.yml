@@ -1,0 +1,33 @@
+server:
+  port: 9010
+
+spring:
+  cloud:
+    gateway:
+      globalcors:
+        cors-configurations:
+          '[/**]':
+            allowedOrigins: "http://localhost:4200"
+            allowedMethods:
+            - GET
+            - POST
+            - PUT
+            - DELETE
+        add-to-simple-url-handler-mapping: true
+      routes:
+      - id: favourites
+        uri: http://localhost:8082
+        predicates:
+          - Path=/fav/**
+      - id: restaurant
+        uri: http://localhost:8083
+        predicates:
+          - Path=/foodie/**
+      - id: order
+        uri: http://localhost:8086
+        predicates:
+          - Path=/foodie/**
+      - id: restaurant
+        uri: http://localhost:9091
+        predicates:
+          - Path=/users/api/**

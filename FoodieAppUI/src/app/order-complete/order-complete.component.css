@@ -1,0 +1,148 @@
+.bg1{
+	background-image: url(https://thumbs.dreamstime.com/b/food-cold-snacks-top-view-setting-dark-background-variety-food-plates-cold-snacks-top-view-black-background-assortment-115128993.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+    height: 100%;
+    min-width: 100%;
+   
+   padding-bottom: 50px;
+
+}
+.blur1{
+    background: rgba(black, 0.1);
+	backdrop-filter: blur(6px); 
+	height: 100%;
+	  width: 100%;
+      padding: 100px;
+  overflow-x: hidden;
+
+}
+.btn-done{
+  width: 100%;
+  text-align: center;
+  margin-top: 50px;
+}
+.btn-done button{
+  background-color: black;
+  color: white;
+  border: 1px solid grey;
+  box-shadow: 5px 5px  10px 2px grey;
+}
+
+.btn-done button:hover{
+  background-color: white;
+      color: black;
+      transition: 0.3s all ease-in-out;
+} 
+.navbtns
+  {
+    float: right;
+    font-size: 15px;
+    width: 10%;
+    padding: 0px 7px;
+    margin-left: 44%;
+    margin-top: 10px;
+    background-color: black;
+    color: white;
+    border: 1px solid grey;
+    box-shadow: 5px 5px  10px 2px grey;
+
+  }
+
+
+  .searchbar{
+    margin-top: 20px;
+  }
+
+  
+
+  .navbtns:hover{
+      background-color: white;
+      color: black;
+      transition: 0.3s all ease-in-out;
+
+  }
+
+.text{
+   
+    
+    text-align: center;
+    color: white;
+    /* width: 30%; */
+    width: 100%;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+
+
+.img-display{
+  margin-left: 30%;
+}
+
+.fade-in-image {
+    animation: fadeIn 5s;
+    -webkit-animation: fadeIn 5s;
+    -moz-animation: fadeIn 5s;
+    -o-animation: fadeIn 5s;
+    -ms-animation: fadeIn 5s;
+  }
+  @keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
+
+@-moz-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
+  
+  @-webkit-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
+  
+  @-o-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
+  
+  @-ms-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
+
+  @media screen and (max-width: 700px){
+
+    .img-display{
+        margin-left: 0 !important;
+        width: 100% !important;
+    }
+  
+    
+    }
+    
+    @media screen and (max-width: 900px){
+    
+      .img-display
+      {
+          justify-content: center;
+      }
+      .navbtns
+    {
+      font-size: 0;
+    }
+      
+    }
+    
+    @media screen and (max-width: 1220px){      
+    
+        .img-display{
+            margin-left: 20%;
+        }
+        .navbtns{
+          
+        }
+    }

@@ -1,0 +1,59 @@
+.heading
+{
+    text-align: center;
+    color: white;
+    font-size: 50px;
+    font-family: 'Papyrus';
+    letter-spacing: 10px;
+    
+  
+}
+.gif
+{
+	margin-left: 340px;	
+}
+
+.title-anme
+{
+    background-color: #e7dac3;
+    font-size: large;
+    text-transform:uppercase;
+ 
+}
+
+.bg{    
+	background-image: url(https://cdn.create.vista.com/api/media/medium/192739468/stock-photo-top-view-spoon-fork-meat?token=);
+	background-repeat: no-repeat;
+	background-size: cover;
+    height: 100%;
+}
+
+.orders{
+    width: 100%;
+    justify-content: center;
+    margin-left: 25%;
+}
+
+
+.blur{
+	backdrop-filter: blur(7px); 
+	height: auto;
+    height: 100%;
+	  width: 100%;
+
+}
+.container>h1{
+    
+    color: white;
+}
+
+.panel{
+    margin: 10px;
+    width: 50%;
+
+}
+
+.grid5{
+    font-weight: 800;
+    font-size: medium;
+}

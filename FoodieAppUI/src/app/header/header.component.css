@@ -1,0 +1,95 @@
+@import "https://fonts.googleapis.com/css?family=Loto:300,400,700";
+@import "https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css";
+
+.mat-toolbar{
+  height: 9vh;
+  background-color: white;
+  top: 0;
+}
+
+div {
+    overflow: inherit;
+}
+
+a{
+    text-decoration: none;
+    font-size: 110%;
+    white-space: normal;
+}
+
+button{
+    font-size: 110%;
+    min-width: min-content;
+}
+
+  .example-spacer {
+    flex: 1 1 auto;
+  }
+
+  .mat-sidenav-content{
+      font-size: 200%;
+      text-align: center;
+  }
+
+  .navbtns
+  {
+    margin-left: 15px;
+    margin-top: 20px;
+    font-size: 15px;
+    padding: 0px 10px;
+    background-color: black;
+    color: white;
+    border: 1px solid grey;
+    box-shadow: 5px 5px  10px 2px grey;
+    text-transform: capitalize;
+  }
+
+  .searchbar{
+    margin-top: 20px;
+  }
+
+  
+
+  .navbtns:hover{
+      background-color: white;
+      color: black;
+      transition: 0.3s all ease-in-out;
+
+  }
+ 
+  .logo {
+    display: inline;
+    margin: 0px;
+    font-size: 50px;
+    float: left;
+    color: white;
+    text-align: center;
+  }
+  h1 {
+    display: inline;
+    font-size: 40px;
+    font-weight: bolder;
+    font-family: "Lucida Handwriting";
+  }
+  .a1 {
+    color: red;
+  }
+  .a2 {
+    color: green;
+  }
+
+  
+ 
+
+
+.btnul{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+.btnli{
+  float: left;
+  justify-content: center;
+}
+
